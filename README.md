@@ -1,50 +1,47 @@
-# Welcome to your Expo app 👋
+# Roman Converter
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+This application converts Roman numerals to real numbers and vice versa. It provides a simple and intuitive interface for users to perform these conversions efficiently.
 
-## Get started
+## Features
 
-1. Install dependencies
+- Convert Roman numerals to integers.
+- Convert integers to Roman numerals.
+- User-friendly interface built with React Native and Expo.
 
-   ```bash
-   npm install
-   ```
+## Preview
 
-2. Start the app
+<p align="center">
+  <img src="./github/1.jpg" alt="accio" width="auto" height="500px">
+  <img src="./github/2.jpeg" alt="accio" width="auto" height="500px">
+</p>
 
-   ```bash
-    npx expo start
-   ```
+## Prerequisites
 
-In the output, you'll find options to open the app in a
+Before you begin, ensure you have met the following requirements:
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+- You have installed Node.js and npm.
+- You have installed Expo CLI globally on your machine. If not, you can install it using the following command:
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+  ```bash
+  npm install -g expo-cli
+  ```
 
-## Get a fresh project
+## Getting Start
 
-When you're ready, run:
+- Install dependencies with this command:
 
-```bash
-npm run reset-project
-```
+  ```bash
+  npm i
+  ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+- Run application with this command:
 
-## Learn more
+  ```bash
+  npm run start
+  ```
 
-To learn more about developing your project with Expo, look at the following resources:
+- Run unit test with this command:
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+  ```bash
+  npm run test
+  ```
