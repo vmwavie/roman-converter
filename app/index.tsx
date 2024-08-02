@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import {
   Container,
   InputContainer,
@@ -14,6 +15,7 @@ import NumberToRoman from '@/utils/NumberToRoman';
 import RomanToNumber from '@/utils/RomanToNumber';
 
 export default function HomeScreen() {
+  const { t } = useTranslation();
   const [text, setText] = useState('');
   const [result, setResult] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
@@ -28,9 +30,7 @@ export default function HomeScreen() {
       const haveNumber = input.match(REGEX_VALIDATIONS.number);
 
       if ((haveCharacter && haveNumber) || (!haveCharacter && !haveNumber)) {
-        setErrorMessage(
-          'Você deve digitar um número romano ou número decimal, para a conversão do mesmo.'
-        );
+        setErrorMessage(t('errorMessage'));
         return;
       }
 
@@ -43,22 +43,22 @@ export default function HomeScreen() {
       }
 
       if (newResult.length >= 100) {
-        setErrorMessage('O número convertido excede o limite de 100 caracteres.');
+        setErrorMessage(t('conversionError'));
         return;
       }
 
       setResult(newResult);
     } catch (error) {
-      alert('Ocorreu um erro inesperado. Tente novamente');
+      alert(t('unexpectedError'));
       console.log(error);
     }
   }
 
   return (
     <Container>
-      <Title>Conversor de números romanos</Title>
+      <Title>{t('title')}</Title>
       <InputContainer>
-        <StyledInputLabel>Digite o número para conversão: </StyledInputLabel>
+        <StyledInputLabel>{t('inputLabel')}</StyledInputLabel>
         <StyledTextInputContainer>
           <StyledTextInput
             value={text}
@@ -66,7 +66,7 @@ export default function HomeScreen() {
               setText(value);
               handleConverter(value);
             }}
-            placeholder="Ex: MMXX ou 10"
+            placeholder={t('placeholder')}
             placeholderTextColor="#888"
           />
         </StyledTextInputContainer>
